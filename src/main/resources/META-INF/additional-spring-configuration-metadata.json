@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "shurjopay.username",
+    "type": "java.lang.String",
+    "description": "A description for 'shurjopay.username'"
+  },
+  {
+    "name": "shurjopay.password",
+    "type": "java.lang.String",
+    "description": "A description for 'shurjopay.password'"
+  },
+  {
+    "name": "shurjopay.sp-callback",
+    "type": "java.lang.String",
+    "description": "A description for 'shurjopay.sp-callback'"
+  },
+  {
+    "name": "shurjopay.shurjopay-api",
+    "type": "java.lang.String",
+    "description": "A description for 'shurjopay.shurjopay-api'"
+  }
+]}
