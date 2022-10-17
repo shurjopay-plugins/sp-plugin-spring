@@ -1,8 +1,14 @@
+**/src/main/resources/application.properties
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+**/src/main/resources/META-INF/
+mos-api.log
+**.gz
+
+bin/
 
 ### STS ###
 .apt_generated
