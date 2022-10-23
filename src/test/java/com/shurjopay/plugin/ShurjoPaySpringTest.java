@@ -24,7 +24,7 @@ import com.shurjopay.plugin.model.VerifiedPayment;
 class ShurjoPaySpringTest { 
 
 	@Autowired
-	private ShurjoPay shurjopay;
+	private Shurjopay shurjopay;
 
 	private PaymentRes paymentRes;
 
