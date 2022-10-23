@@ -20,7 +20,7 @@ import com.shurjopay.plugin.model.ShurjopayConfig;
  * @since 2022-10-16
  */
 @Configuration
-public class ShurjoPaySpringConfig {
+public class ShurjopaySpringConfig {
 
 	@Value("${shurjopay.username}")
 	private String username;
