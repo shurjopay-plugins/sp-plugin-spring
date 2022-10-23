@@ -13,7 +13,7 @@ import com.shurjopay.plugin.model.ShurjopayConfig;
  * shurjopay.username,
  * shurjopay.password,
  * shurjopay.shurjopay-api,
- * shurjopay.sp-callback,
+ * shurjopay.sp-callback
  * </code>
  * 
  * @author Al-Amin
@@ -35,8 +35,8 @@ public class ShurjoPaySpringConfig {
 	private String callbackUrl;
 
 	@Bean
-	public ShurjoPay shurjoPay() {
-		return new ShurjoPay(shurjopayConfig());
+	public Shurjopay shurjoPay() {
+		return new Shurjopay(shurjopayConfig());
 	}
 
 	@Bean
