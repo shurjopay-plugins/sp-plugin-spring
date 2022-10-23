@@ -3,10 +3,12 @@ package com.shurjopay.plugin;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
-import org.junit.jupiter.api.TestInstance.Lifecycle;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -19,6 +21,7 @@ import com.shurjopay.plugin.model.VerifiedPayment;
  *
  */
 @SpringBootTest
+@TestMethodOrder(OrderAnnotation.class)
 @TestInstance(Lifecycle.PER_CLASS)
 @DisplayName("Testing ShurjoPaySpring =>")
 class ShurjoPaySpringTest { 
@@ -66,7 +69,6 @@ class ShurjoPaySpringTest {
 		request.setCustomerCity("Dhaka");
 		request.setCustomerPostCode("1212");
 		request.setCustomerEmail("al@gmail.com");
-		request.setClientIp("102.101.1.1");
 		return request;
 	}
 
