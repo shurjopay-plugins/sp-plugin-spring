@@ -1,9 +1,10 @@
-package com.shurjopay.plugin;
+package bd.com.shurjopay.plugin;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.shurjopay.plugin.Shurjopay;
 import com.shurjopay.plugin.model.ShurjopayConfig;
 
 /**

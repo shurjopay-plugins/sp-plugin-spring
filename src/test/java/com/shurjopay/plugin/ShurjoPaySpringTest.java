@@ -22,6 +22,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.shurjopay.plugin.model.PaymentReq;
 import com.shurjopay.plugin.model.PaymentRes;
 import com.shurjopay.plugin.model.VerifiedPayment;
+
+import bd.com.shurjopay.plugin.ShurjopaySpringConfig;
 /**
  * @author Al-Amin
  * @since 2022-10-16
