@@ -19,11 +19,12 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.shurjopay.plugin.model.PaymentReq;
-import com.shurjopay.plugin.model.PaymentRes;
-import com.shurjopay.plugin.model.VerifiedPayment;
-
+import bd.com.shurjopay.plugin.Shurjopay;
+import bd.com.shurjopay.plugin.ShurjopayException;
 import bd.com.shurjopay.plugin.ShurjopaySpringConfig;
+import bd.com.shurjopay.plugin.model.PaymentReq;
+import bd.com.shurjopay.plugin.model.PaymentRes;
+import bd.com.shurjopay.plugin.model.VerifiedPayment;
 /**
  * @author Al-Amin
  * @since 2022-10-16
@@ -122,7 +123,7 @@ class ShurjoPaySpringTest {
 		WebElement webEl = driver.findElement(By.id("input-38"));
 		webEl.sendKeys("444444444444");
 		
-		/** Fills up expire month */
+		/** Fills up card expire month */
 		webEl = driver.findElement(By.id("mm"));
 		webEl.sendKeys("12");
 		
