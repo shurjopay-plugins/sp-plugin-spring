@@ -18,5 +18,15 @@
     "name": "shurjopay.shurjopay-api",
     "type": "java.lang.String",
     "description": "A description for 'shurjopay.shurjopay-api'"
+  },
+  {
+    "name": "shurjopay.logging.file.path",
+    "type": "java.lang.String",
+    "description": "A description for 'shurjopay.logging.file.path'"
+  },
+  {
+    "name": "shurjopay.logging.file.name",
+    "type": "java.lang.String",
+    "description": "A description for 'shurjopay.logging.file.name'"
   }
 ]}
