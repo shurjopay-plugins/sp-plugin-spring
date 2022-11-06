@@ -3,3 +3,7 @@ shurjopay:
   password: pyyk97hu&6u6
   shurjopay-api: https://sandbox.shurjopayment.com/api/
   sp-callback: https://sandbox.shurjopayment.com/response
+  logging:
+    file:
+      path: /home/alamin/git/sp-plugin-spring/tmp_spring
+      name: shurjopay-plugin.log
