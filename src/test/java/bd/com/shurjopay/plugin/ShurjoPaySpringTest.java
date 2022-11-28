@@ -1,4 +1,4 @@
-package com.shurjopay.plugin;
+package bd.com.shurjopay.plugin;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
