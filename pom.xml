@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>bd.com.shurjopay.plugin</groupId>
 	<artifactId>sp-plugin-spring</artifactId>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<name>sp-plugin-spring</name>
 	<description>shurjoPay plugin for Spring Boot</description>
 	<url>${github.url}/sp-plugin-spring</url>
