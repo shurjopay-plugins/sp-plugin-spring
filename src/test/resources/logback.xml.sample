@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xml>
 <configuration>
-	<property resource="application.yml"/>
+	<property resource="shurjopay.properties"/>
 	
 	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
-		<file>${path}/${name}</file>
+		<file>${SPLOG_PATH}/${SPLOG_FILE}</file>
 		<append>true</append>
 		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
 			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
@@ -17,11 +17,11 @@
         </encoder>
     </appender>
     
-    <logger name="com.shurjopay" level="INFO" additivity="false">
+    <logger name="com.shurjopay" level="err" additivity="false">
         <appender-ref ref="FILE"/>
     </logger>
 
-	<root level="INFO">
+	<root level="err">
 		<appender-ref ref="FILE" />
 		<appender-ref ref="CONSOLE" />
 	</root>
