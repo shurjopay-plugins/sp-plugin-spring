@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.shurjopay.ShurjopaySpringConfig
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=bd.com.shurjopay.plugin.ShurjopaySpringConfig

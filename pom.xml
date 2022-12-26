@@ -34,7 +34,7 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>com.shurjopay</groupId>
+			<groupId>bd.com.shurjopay.plugin</groupId>
 			<artifactId>sp-plugin-java</artifactId>
 			<version>1.0.0</version>
 		</dependency>
