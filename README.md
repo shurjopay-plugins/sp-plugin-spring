@@ -65,7 +65,7 @@ Developer must call _verifyPayment()_ method after completing payment with shurj
 	 ```
 	- Returns POJO corresponding this [_JSON_](https://github.com/shurjopay-plugins/sp-plugin-spring/blob/develop/src/test/resources/sample-msg/verification-res.json)
 ## Want to see shurjoPay visually?
-Run the java unit test to see shurjopay plugin in action. These tests will run on selenium browser and will provide the complete experience. Just download [source](https://github.com/shurjopay-plugins/sp-plugin-spring) and run ```ShurjopayTest``` class.
+Run the spring unit test to see shurjopay plugin in action. These tests will run on selenium browser and will provide the complete experience. Just download [source](https://github.com/shurjopay-plugins/sp-plugin-spring) and run ```ShurjopayTest``` class.
 Have a look to our other [shurjoPay plugins](https://github.com/shurjopay-plugins)
 ## License
 This code is under the [MIT open source License](https://github.com/shurjopay-plugins/sp-plugin-spring/blob/develop/LICENSE).
