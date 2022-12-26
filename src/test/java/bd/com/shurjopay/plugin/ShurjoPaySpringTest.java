@@ -19,9 +19,10 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.shurjopay.ShurjopaySpringConfig;
+
 import bd.com.shurjopay.plugin.Shurjopay;
 import bd.com.shurjopay.plugin.ShurjopayException;
-import bd.com.shurjopay.plugin.ShurjopaySpringConfig;
 import bd.com.shurjopay.plugin.model.PaymentReq;
 import bd.com.shurjopay.plugin.model.PaymentRes;
 import bd.com.shurjopay.plugin.model.VerifiedPayment;

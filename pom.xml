@@ -7,7 +7,7 @@
 		<version>2.7.4</version>
 		<relativePath />
 	</parent>
-	<groupId>bd.com.shurjopay.plugin</groupId>
+	<groupId>com.shurjopay</groupId>
 	<artifactId>sp-plugin-spring</artifactId>
 	<version>1.1.0</version>
 	<name>sp-plugin-spring</name>
@@ -34,7 +34,7 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>bd.com.shurjopay.plugin</groupId>
+			<groupId>com.shurjopay</groupId>
 			<artifactId>sp-plugin-java</artifactId>
 			<version>1.0.0</version>
 		</dependency>

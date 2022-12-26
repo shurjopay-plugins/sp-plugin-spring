@@ -63,7 +63,7 @@ shurjopay.logging.file.name=shurjopay-plugin.log
         </encoder>
     </appender>
     
-    <logger name="bd.com.shurjopay.plugin" level="INFO" additivity="false">
+    <logger name="com.shurjopay" level="INFO" additivity="false">
         <appender-ref ref="FILE"/>
     </logger>
 
