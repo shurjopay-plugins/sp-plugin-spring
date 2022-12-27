@@ -1,9 +1,9 @@
 ﻿# ![image](https://user-images.githubusercontent.com/57352037/155895117-523cfb9e-d895-47bf-a962-2bcdda49ad66.png) Spring Plugin
 
-Official shurjoPay Java plugin for merchants or service providers to connect with [**_shurjoPay_**](https://shurjopay.com.bd) Payment Gateway ``` v2.1 ``` developed and maintained by [_**ShurjoMukhi Limited**_](https://shurjomukhi.com.bd).
+Official shurjoPay Spring plugin for merchants or service providers to connect with [**_shurjoPay_**](https://shurjopay.com.bd) Payment Gateway ``` v2.1 ``` developed and maintained by [_**ShurjoMukhi Limited**_](https://shurjomukhi.com.bd).
 
-This plugin can be used with any java application or framework (e.g. Spring).
-Also it makes easy for developers to integrate with shurjoPay ``` v2.1 ``` with just three API calls:
+This plugin can be used with spring application.
+Also it makes easy for developers to integrate with shurjoPay ``` v2.1 ``` with just calling three methods:
 
 1. **makePayment**: create and send payment request
 1. **verifyPayment**: verify payment status at shurjoPay
@@ -17,23 +17,23 @@ Also reduces many of the things that you had to do manually:
 ## Audience
 This document is intended for the technical personnel of merchants and service providers who wants to integrate our online payment gateway using spring plugin provided by _**shurjoMukhi Limited**_.
 ## How to use this shurjoPay plugin
-To integrate the shurjoPay Payment Gateway in your Java project do the following tasks sequentially.
+To integrate the shurjoPay Payment Gateway in your spring project do the following tasks sequentially.
 ### Step 1: Add dependency to your project corresponding Maven or Gradle:<br>
 **Maven**
 ```xml
 <dependency>
-    <groupId>com.shurjomukhi</groupId>
-    <artifactId>sp-plugin-spring</artifactId>
-    <version>1.1.0</version>
+  <groupId>bd.com.shurjopay.plugin</groupId>
+  <artifactId>sp-plugin-spring</artifactId>
+  <version>1.1.0</version>
 </dependency>
 ```
 **Gradle**
 ```gradle
-implementation 'com.shurjomukhi:sp-plugin-spring:1.1.0'
+implementation 'bd.com.shurjopay.plugin:sp-plugin-spring:1.1.0'
 ```
 > **_Attention:_ [_shurjoMukhi Limited_](https://shurjomukhi.com.bd/) offers another plugin for integrating most popular [**_shurjoPay_**](https://shurjopay.com.bd/) payment gateway with <u>_Java Application_. Visit our [Java plugin](https://github.com/shurjopay-plugins/sp-plugin-java)**<hr>
 
-### Step 2: Add shurjoPay properties to application properties.
+### Step 2: Add shurjoPay properties to default project properties file.
 Properties contains four fields ``` username, password, shurjopay-api, sp-callback ``` to configure shurjoPay and 2 other fields to configure _shurjoPay_ logging are ``` path ``` and ``` name. ```
 ```yml
 shurjopay:
@@ -47,13 +47,8 @@ shurjopay:
       name: sp-plugin-spring.log
 ```
 - Visit [_YML format_](https://github.com/shurjopay-plugins/sp-plugin-spring/blob/develop/src/test/resources/application-sample.yml) and [_properties format_](https://github.com/shurjopay-plugins/sp-plugin-spring/blob/develop/src/test/resources/application-sample.properties) for examples.
-- If you add ```logback-classic``` dependency in your application then shurjoPay will maintain separate log file to track errors.
-### Initialize shurjoPay:
-Now time to initialize shurjoPay to perform with features. For that
-```java
-private @Autowired Shurjopay shurjopay;
-```
-Above code will be initialezed a _shurjoPay_ instance.
+- If you add ```logback-classic``` dependency in your application then shurjoPay will maintain separate log file to track shurjoPay errors only.
+
 ### Step 3: After that, you can initiate payment request to shurjoPay using below code example.
 - Request example
  ```java 
@@ -85,7 +80,7 @@ Above code will be initialezed a _shurjoPay_ instance.
  ```
 - Returns [_POJO_](https://github.com/shurjopay-plugins/sp-plugin-java/blob/develop/src/main/java/com/shurjomukhi/model/VerifiedPayment.java) corresponding this [_JSON_](https://github.com/shurjopay-plugins/sp-plugin-spring/blob/develop/src/test/resources/sample-msg/verification-res.json)
 ## Want to see shurjoPay visually?
-Run the spring unit test to see shurjopay plugin in action. These tests will run on selenium browser and will provide the complete experience. Just download source and run ```ShurjopayTest``` class.
+Run the Junit test to see shurjopay plugin in action. These tests will run on selenium browser and will provide the complete experience. Just download source and run ```ShurjopayTest``` class.
 ## References
 1. [Spring example application](https://github.com/shurjopay-plugins/sp-plugin-usage-examples/tree/dev/spring-app-spring-plugin) showing usage of the spring plugin.
 2. [Sample applications and projects](https://github.com/shurjopay-plugins/sp-plugin-usage-examples) in many different languages and frameworks showing shurjopay integration.
