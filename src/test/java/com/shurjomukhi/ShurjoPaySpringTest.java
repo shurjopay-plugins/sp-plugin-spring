@@ -1,4 +1,4 @@
-package bd.com.shurjopay.plugin;
+package com.shurjomukhi;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -19,7 +19,7 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.shurjopay.ShurjopaySpringConfig;
+import com.shurjomukhi.ShurjopaySpringConfig;
 
 import bd.com.shurjopay.plugin.Shurjopay;
 import bd.com.shurjopay.plugin.ShurjopayException;

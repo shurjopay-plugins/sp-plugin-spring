@@ -1,4 +1,4 @@
-package com.shurjopay;
+package com.shurjomukhi;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
