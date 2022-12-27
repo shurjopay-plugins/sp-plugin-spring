@@ -1,9 +1,9 @@
 shurjopay:
-  username: sp_sandbox
-  password: pyyk97hu&6u6
+  username: <merchant_username>
+  password: <merchant_password>
   shurjopay-api: https://sandbox.shurjopayment.com/api/
   sp-callback: https://sandbox.shurjopayment.com/response
   logging:
     file:
-      path: /home/alamin/git/sp-plugin-spring/tmp_spring
-      name: shurjopay-plugin.log
+      path: /var/log
+      name: sp-plugin-spring.log
