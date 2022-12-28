@@ -33,7 +33,7 @@ implementation 'bd.com.shurjopay.plugin:sp-plugin-spring:1.1.0'
 ```
 > **_Attention:_ [_shurjoMukhi Limited_](https://shurjomukhi.com.bd/) offers another plugin for integrating most popular [**_shurjoPay_**](https://shurjopay.com.bd/) payment gateway with <u>_Java Application_. Visit our [Java plugin](https://github.com/shurjopay-plugins/sp-plugin-java)**<hr>
 
-### Step 2: Add shurjoPay properties to default project properties file.
+### Step 2: Add below properties to default yml/properties file (e.g. application.yml, application.properties).
 Properties contains four fields ``` username, password, shurjopay-api, sp-callback ``` to configure shurjoPay and 2 other fields to configure _shurjoPay_ logging are ``` path ``` and ``` name. ```
 ```yml
 shurjopay:
@@ -80,7 +80,7 @@ shurjopay:
  ```
 - Returns [_POJO_](https://github.com/shurjopay-plugins/sp-plugin-java/blob/develop/src/main/java/com/shurjomukhi/model/VerifiedPayment.java) corresponding this [_JSON_](https://github.com/shurjopay-plugins/sp-plugin-spring/blob/develop/src/test/resources/sample-msg/verification-res.json)
 ## Want to see shurjoPay visually?
-Run the Junit test to see shurjopay plugin in action. These tests will run on selenium browser and will provide the complete experience. Just download source and run ```ShurjopayTest``` class.
+Run the Junit test to see shurjopay plugin in action. These tests will run on selenium browser and will provide the complete experience. Just download source and run the command ```mvnw test``` in Windows and ```./mvnw test``` in Linux from plugin root path.
 ## References
 1. [Spring example application](https://github.com/shurjopay-plugins/sp-plugin-usage-examples/tree/dev/spring-app-spring-plugin) showing usage of the spring plugin.
 2. [Sample applications and projects](https://github.com/shurjopay-plugins/sp-plugin-usage-examples) in many different languages and frameworks showing shurjopay integration.
