@@ -47,7 +47,7 @@ shurjopay:
       name: sp-plugin-spring.log
 ```
 - Visit [_YML format_](https://github.com/shurjopay-plugins/sp-plugin-spring/blob/develop/src/test/resources/application-sample.yml) and [_properties format_](https://github.com/shurjopay-plugins/sp-plugin-spring/blob/develop/src/test/resources/application-sample.properties) for examples.
-- If you add ```logback-classic``` dependency in your application then shurjoPay will maintain separate log file to track shurjoPay errors only.
+- If you add ```logback-classic``` dependency in your application then shurjoPay will maintain separate log file to track shurjoPay errors only (optional).
 
 ### Step 3: After that, you can initiate payment request to shurjoPay using below code example.
 - Request example
