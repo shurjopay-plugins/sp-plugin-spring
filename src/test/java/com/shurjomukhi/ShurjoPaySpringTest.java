@@ -6,20 +6,18 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
-import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import com.shurjomukhi.ShurjopaySpringConfig;
 
 import bd.com.shurjopay.plugin.Shurjopay;
 import bd.com.shurjopay.plugin.ShurjopayException;
@@ -59,16 +57,16 @@ class ShurjoPaySpringTest {
 	@Order(2)
 	@DisplayName("For verifying order (Success payment test): ")
 	void testVerifyOrder() throws ShurjopayException {
-		VerifiedPayment order = shurjopay.verifyPayment(paymentRes.getSpOrderId());
-		assertNotNull(order.getOrderId(), () -> "Order is not found.");
+		VerifiedPayment order = shurjopay.verifyPayment(paymentRes.getSpTxnId());
+		assertNotNull(order.getSpTxnId(), () -> "Order is not found.");
 	}
 
 	@Test
 	@Order(3)
 	@DisplayName("For checking order status (Success payment test): ")
 	void testCheckPaymentStatus() throws ShurjopayException {
-		VerifiedPayment order = shurjopay.checkPaymentStatus(paymentRes.getSpOrderId());
-		assertNotNull(order.getOrderId(), () -> "Order is not found.");
+		VerifiedPayment order = shurjopay.checkPaymentStatus(paymentRes.getSpTxnId());
+		assertNotNull(order.getSpTxnId(), () -> "Order is not found.");
 	}
 	
 	@Test
@@ -87,7 +85,7 @@ class ShurjoPaySpringTest {
 	@Order(5)
 	@DisplayName("For verifying order (Failed payment test): ")
 	void testVerifyOrderFailed() {
-		Throwable exception = assertThrows(ShurjopayException.class, () -> shurjopay.verifyPayment(paymentRes.getSpOrderId()));
+		Throwable exception = assertThrows(ShurjopayException.class, () -> shurjopay.verifyPayment(paymentRes.getSpTxnId()));
 		assertEquals("Code: 1005 Message: Bank transaction failed.", exception.getMessage());
 	}
 
@@ -95,8 +93,8 @@ class ShurjoPaySpringTest {
 	@Order(6)
 	@DisplayName("For checking order status (Failed payment test): ")
 	void testCheckPaymentStatusFailed() throws ShurjopayException {
-		VerifiedPayment order = shurjopay.checkPaymentStatus(paymentRes.getSpOrderId());
-		assertNotNull(order.getOrderId(), () -> "Order is not found.");
+		VerifiedPayment order = shurjopay.checkPaymentStatus(paymentRes.getSpTxnId());
+		assertNotNull(order.getSpTxnId(), () -> "Order is not found.");
 	}
 	
 	private PaymentReq getPaymentReq() {
@@ -104,7 +102,7 @@ class ShurjoPaySpringTest {
 
 		request.setPrefix("dummy");
 		request.setAmount(10.00);
-		request.setOrderId("sp315689");
+		request.setCustomerOrderId("sp315689");
 		request.setCurrency("BDT");
 		request.setCustomerName("Dummy");
 		request.setCustomerAddress("Dhaka");
@@ -154,6 +152,7 @@ class ShurjoPaySpringTest {
 		options.setHeadless(false);
 		
 		WebDriver driver = new ChromeDriver(options);
+		driver.manage().window().maximize();
 		return driver;
 	}
 }
