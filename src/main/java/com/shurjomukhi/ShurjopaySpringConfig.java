@@ -4,8 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import bd.com.shurjopay.plugin.Shurjopay;
-import bd.com.shurjopay.plugin.model.ShurjopayConfig;
+import com.shurjomukhi.model.ShurjopayConfig;
 
 /**
  * Configures auto-wired shurjopay spring bean,
