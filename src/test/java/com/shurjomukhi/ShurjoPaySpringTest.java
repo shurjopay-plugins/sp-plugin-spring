@@ -19,11 +19,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import bd.com.shurjopay.plugin.Shurjopay;
-import bd.com.shurjopay.plugin.ShurjopayException;
-import bd.com.shurjopay.plugin.model.PaymentReq;
-import bd.com.shurjopay.plugin.model.PaymentRes;
-import bd.com.shurjopay.plugin.model.VerifiedPayment;
+import com.shurjomukhi.model.PaymentReq;
+import com.shurjomukhi.model.PaymentRes;
+import com.shurjomukhi.model.VerifiedPayment;
 /**
  * @author Al-Amin
  * @since 2022-10-16
