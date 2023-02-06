@@ -36,7 +36,7 @@
 		<dependency>
     		<groupId>bd.com.shurjomukhi</groupId>
     		<artifactId>sp-plugin-java</artifactId>
-   		 	<version>0.2.0</version>
+   		 	<version>0.3.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
