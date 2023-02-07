@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>bd.com.shurjomukhi</groupId>
 	<artifactId>sp-plugin-spring</artifactId>
-	<version>0.3.0</version>
+	<version>0.2.6</version>
 	<name>sp-plugin-spring</name>
 	<description>shurjoPay plugin for Spring Application</description>
 	<url>${github.url}</url>
@@ -36,7 +36,7 @@
 		<dependency>
     		<groupId>bd.com.shurjomukhi</groupId>
     		<artifactId>sp-plugin-java</artifactId>
-   		 	<version>0.3.0</version>
+   		 	<version>0.2.6</version>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
