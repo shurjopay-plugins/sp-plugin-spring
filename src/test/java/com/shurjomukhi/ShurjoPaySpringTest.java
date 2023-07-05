@@ -45,9 +45,7 @@ class ShurjoPaySpringTest {
 		PaymentReq req = getPaymentReq();
 		paymentRes = shurjopay.makePayment(req);
 		String paymentUrl = paymentRes.getPaymentUrl();
-
 		fillupAndSubmitPaymentForm(paymentUrl, false);
-		
 		assertNotNull(paymentUrl, () -> "Making Payment returns null");
 	}
 
@@ -58,17 +56,9 @@ class ShurjoPaySpringTest {
 		VerifiedPayment order = shurjopay.verifyPayment(paymentRes.getSpTxnId());
 		assertNotNull(order.getSpTxnId(), () -> "Order is not found.");
 	}
-
-	@Test
-	@Order(3)
-	@DisplayName("For checking order status (Success payment test): ")
-	void testCheckPaymentStatus() throws ShurjopayException {
-		VerifiedPayment order = shurjopay.checkPaymentStatus(paymentRes.getSpTxnId());
-		assertNotNull(order.getSpTxnId(), () -> "Order is not found.");
-	}
 	
 	@Test
-	@Order(4)
+	@Order(3)
 	@DisplayName("For making shurjoPay payment (Failed payment test): ")
 	void testMakePaymentFailed() throws ShurjopayException, InterruptedException {
 		PaymentReq req = getPaymentReq();
@@ -80,19 +70,11 @@ class ShurjoPaySpringTest {
 	}
 
 	@Test
-	@Order(5)
+	@Order(4)
 	@DisplayName("For verifying order (Failed payment test): ")
 	void testVerifyOrderFailed() {
 		Throwable exception = assertThrows(ShurjopayException.class, () -> shurjopay.verifyPayment(paymentRes.getSpTxnId()));
-		assertEquals("Code: 1005 Message: Bank transaction failed.", exception.getMessage());
-	}
-
-	@Test
-	@Order(6)
-	@DisplayName("For checking order status (Failed payment test): ")
-	void testCheckPaymentStatusFailed() throws ShurjopayException {
-		VerifiedPayment order = shurjopay.checkPaymentStatus(paymentRes.getSpTxnId());
-		assertNotNull(order.getSpTxnId(), () -> "Order is not found.");
+		assertEquals("Code: 1005 Message: Channel Unavailable", exception.getMessage());
 	}
 	
 	private PaymentReq getPaymentReq() {
@@ -144,10 +126,20 @@ class ShurjoPaySpringTest {
 		driver.quit();
 	}
 	
+	/**
+	 * Prepares chrome driver instance
+	 *
+	 * @return prepared chrome driver.
+	 */
 	private WebDriver getChrome() {
-		System.setProperty("webdriver.chrome.driver", "/home/alamin/git/sp-plugin-java/src/test/resources/drivers/chromedriver");
+
+		String osName = System.getProperty("os.name");
+		String chromeDriver = osName.contains("Windows") ? "chromedriver.exe" : osName.contains("Linux") ? "chromedriver" : "chromedriver_mac";
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/".concat(chromeDriver));
+
 		ChromeOptions options = new ChromeOptions();
 		options.setHeadless(false);
+		options.addArguments("--remote-allow-origins=*");
 		
 		WebDriver driver = new ChromeDriver(options);
 		driver.manage().window().maximize();

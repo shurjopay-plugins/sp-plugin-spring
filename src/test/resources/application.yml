@@ -1,8 +1,8 @@
 shurjopay:
-  username: sp_sandbox
-  password: pyyk97hu&6u6
-  shurjopay-api: https://sandbox.shurjopayment.com/api/
-  sp-callback: https://sandbox.shurjopayment.com/response
+  username: shurjopay
+  password: pyyk97hu&6u625
+  shurjopay-api: https://engine.shurjopayment.com/api
+  sp-callback: https://engine.shurjopayment.com/response
   logging:
     file:
       path: /home/alamin/git/sp-plugin-spring/tmp_spring

@@ -48,6 +48,7 @@ public class ShurjopaySpringConfig {
 	 */
 	@Bean
 	public ShurjopayConfig shurjopayConfig() {
+		System.out.println("USERNAME IS THIS SHURJOPAY USER"+username);
 		return new ShurjopayConfig()
 				   .setUsername(username)
 				   .setPassword(password)
