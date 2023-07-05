@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -9,7 +11,7 @@
 	</parent>
 	<groupId>bd.com.shurjomukhi</groupId>
 	<artifactId>sp-plugin-spring</artifactId>
-	<version>0.2.6</version>
+	<version>0.2.9</version>
 	<name>sp-plugin-spring</name>
 	<description>shurjoPay plugin for Spring Application</description>
 	<url>${github.url}</url>
@@ -34,9 +36,9 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-    		<groupId>bd.com.shurjomukhi</groupId>
-    		<artifactId>sp-plugin-java</artifactId>
-   		 	<version>0.2.6</version>
+			<groupId>bd.com.shurjomukhi</groupId>
+			<artifactId>sp-plugin-java</artifactId>
+			<version>0.2.16</version>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -83,15 +85,15 @@
 	</licenses>
 
 	<distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
 	<build>
 		<plugins>
 			<plugin>
@@ -155,8 +157,8 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-    			<artifactId>maven-wrapper-plugin</artifactId>
-    			<version>3.1.1</version>
+				<artifactId>maven-wrapper-plugin</artifactId>
+				<version>3.1.1</version>
 			</plugin>
 		</plugins>
 	</build>
