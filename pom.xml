@@ -21,8 +21,7 @@
 		<maven.compiler.target>8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<github.url>https://github.com/shurjoPay-Plugins/sp-plugin-spring</github.url>
-		<git.scm.uri>
-			scm:git:git@github.com:shurjoPay-Plugins/sp-plugin-spring.git</git.scm.uri>
+		<git.scm.uri>scm:git:git@github.com:shurjoPay-Plugins/sp-plugin-spring.git</git.scm.uri>
 		<org.name>shurjoMukhi Limited.</org.name>
 	</properties>
 
@@ -92,8 +91,7 @@
 		</snapshotRepository>
 		<repository>
 			<id>ossrh</id>
-			<url>
-				https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+			<url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
 	</distributionManagement>
 	<build>
