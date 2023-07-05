@@ -5,5 +5,5 @@ shurjopay:
   sp-callback: http://localhost:8080/response
   logging:
     file:
-      path: var/log
-      name: sp-plugin-spring.log
+      path: temp/log
+      name: shurjopay-plugin.log
