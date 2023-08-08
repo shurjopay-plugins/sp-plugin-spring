@@ -39,7 +39,7 @@ Properties contains four fields ```username, password, shurjopay-api, sp-callbac
 shurjopay:
   username: <merchant_username>
   password: <merchant_password>
-  shurjopay-api: https://sandbox.shurjopayment.com/api/
+  shurjopay-api: https://sandbox.shurjopayment.com/api
   sp-callback: https://sandbox.shurjopayment.com/response
   logging:
     file:
