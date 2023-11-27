@@ -22,14 +22,14 @@ To integrate the shurjoPay Payment Gateway in your spring project do the followi
 **Maven**
 ```xml
 <dependency>
-  <groupId>bd.com.shurjomukhi</groupId>
-  <artifactId>sp-plugin-spring</artifactId>
-  <version>0.1.0</version>
+    <groupId>bd.com.shurjomukhi</groupId>
+    <artifactId>sp-plugin-spring</artifactId>
+    <version>0.2.10</version>
 </dependency>
 ```
 **Gradle**
 ```gradle
-implementation 'bd.com.shurjomukhi:sp-plugin-spring:0.1.0'
+implementation 'bd.com.shurjomukhi:sp-plugin-spring:0.2.10'
 ```
 > _Attention:_ shurjoMukhi offers [separate plugin](https://github.com/shurjopay-plugins/sp-plugin-java) to integrate with any _Java Application_.
 
